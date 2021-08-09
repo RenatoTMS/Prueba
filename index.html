@@ -26,20 +26,19 @@
 
     <!-- Bootstrap NavBar -->
     
-    <nav class="container-fluid navbar navbar-expand-lg navbar-dark ps-5  ">
-        <div class="container p-5">
-            <div class="text-left text-start"><svg width"30" Heigth"30">
-             <img src="assests/img/viajes.svg" width="30" height="30" >
+    <nav class="container-fluid navbar navbar-expand-lg navbar-dark sticky-top " id="Inicio">
+        <div class="container text-left ">
+            <div class="text-left text-start"><svg width"20" Heigth"20">
+             <img src="assests/img/viajes.svg" width="20" height="20" >
          </svg> 
-            <a class="fs-2 text-left" href="">Viajes Chile</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button></div>
+            <a class="fs-5 text-left" href="">Viajes Chile</a>
+            
+        </div>
          
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <!-- ms-auto hace que los links se vayan a la derecha -->
+                <ul class="navbar-nav ms-auto"> 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#fotos">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#quienes">Quienes Somos</a>
@@ -57,9 +56,9 @@
     </nav>
 
     <!-- Seccion Carousel/Header -->
-   <header>
+   <header id="fotos">
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls"  class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="assests/img/carousel1.jpg" class="d-block w-100" alt="...">
@@ -84,14 +83,14 @@
 
    </header>
 
-    <!-- Seccion Parrafos/Font Awesoe >md -->
+    <!-- Seccion Parrafos/Font Awesome > -->
 
     <section>
-        <div class="container-fluid text-white text-center fs-1 pt-5">
+        <div class="container-fluid text-white text-center fs-1 pt-5 d-none d-sm-block">
             <h2 id="quienes">¿Quienes Somos?</h2>
         </div>
             
-        <div class="container p-5">
+        <div class="container p-5 d-none d-sm-block ">
             <div class="row">
               <div class="col">
                   <div class="container-fluid text-center bg-info pt-2 pb-2">
@@ -147,15 +146,15 @@
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="card h-100"> <!-- h-100 es para que la tarjeta tengan la misma altura -->
-                        <img src="./assests/img/card2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body bg-info">
-                            <h5 id="click2" class="card-title text-dark">Lugar Bonito 2</h5>
-                            <p id="toggle2" class="card-text text-dark">
-                                Congue fermentum dignissim rhoncus elementum ac nisi, proin phasellus lacinia sed faucibus mauris, taciti scelerisque nulla ornare consequat.
-                            </p>
+                    <div class="card" style="width: 13rem;">
+                        <img src="assests/img/card2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-info text-dark">
+                          <h5 class="card-title">Lugar Bonito 2</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lugar2">
+                            Ver Mas</a>
                         </div>
-                    </div>
+                      </div> 
                 </div>
                 <div class="col-3">
                     <div class="card h-100"> <!-- h-100 es para que la tarjeta tengan la misma altura -->
@@ -169,30 +168,64 @@
                     </div>
                 </div>
                 <div class="col-3">
-                    <div class="card h-100"> <!-- h-100 es para que la tarjeta tengan la misma altura -->
-                        <img src="./assests/img/card4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body bg-info">
-                            <h5 id="click3" class="card-title text-dark">Lugar Bonito 5</h5>
-                            <p id="toggle3" class="card-text text-dark">
-                                Cubilia elementum posuere arcu rhoncus egestas lectus, diam aliquam laoreet ac eleifend risus, urna auctor inceptos mattis dapibus.
-                            </p>
+                    <div class="card" style="width: 15rem;">
+                        <img src="assests/img/card4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body bg-info text-dark">
+                          <h5 class="card-title">Lugar Bonito 4</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary "data-bs-toggle="modal" data-bs-target="#lugar4">
+                            Ver Mas</a>
                         </div>
-                     </div>
+                      </div>
                 </div>
             </div>
         </div>
-
     </section>
+        <div class="modal fade " id="lugar2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog bg-info">
+          <div class="modal-content bg-info">
+            <div class="modal-header bg-info">
+              <h5 class="modal-title bg-info text-dark" id="exampleModalLabel">Lugar Bonito 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-info text-dark">
+                <img src="assests/img/card2.jpg" class="img-fluid" alt="lugar2">
+             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et quae possimus, distinctio minima animi ducimus, sequi optio quibusdam consequatur quos ipsum, eaque impedit ex soluta debitis harum numquam incidunt.</p>
+        </div>
+            <div class="modal-footer bg-info">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade " id="lugar4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog bg-info">
+          <div class="modal-content bg-info">
+            <div class="modal-header bg-info">
+              <h5 class="modal-title bg-info text-dark" id="exampleModalLabel">Lugar Bonito 4</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-info text-dark">
+                <img src="assests/img/card4.jpg" class="img-fluid" alt="lugar2">
+             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et quae possimus, distinctio minima animi ducimus, sequi optio quibusdam consequatur quos ipsum, eaque impedit ex soluta debitis harum numquam incidunt.</p>
+        </div>
+            <div class="modal-footer bg-info">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Sección Typeform -->
 
     <h2 id="contacto" class="fs-2 text-center">Contacto</h2>
-    <div class="typeform-widget" data-url="https://form.typeform.com/to/mhJXMYo3?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+    <div class="typeform-widget" data-url="https://form.typeform.com/to/alqM8nwj?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
 
     <!-- Footer -->
 
     <footer>
-        <div class="container bg-info pt-3 pb-3">
+        <div class="container-fliud bg-info pt-3 pb-3">
             <div class="row">
               <div class="col text-center fs-5">
                 Viajes Chile
